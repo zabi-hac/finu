@@ -1,107 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fathima Farsana | Arabic Teacher & Translator</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fathima Farsana | Arabic Teacher & Translator</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <script>
+      tailwind.config = {
+         theme: {
+            extend: {
+               colors: {
+                  primary: '#1E293B', // Dark Blue Gray
+                  accent: '#FACC15',  // Vibrant Yellow
+                  glass: 'rgba(255,255,255,0.1)', // Glass overlay
+               },
+               fontFamily: {
+                  display: ['Poppins', 'sans-serif'],
+                  body: ['Inter', 'sans-serif'],
+               },
+            },
+         },
+      }
+   </script>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet">
+   <style>
+      body::before {
+         content: '';
+         position: fixed;
+         inset: 0;
+         background: linear-gradient(135deg, #6366F1, #EC4899, #FACC15);
+         background-size: 400% 400%;
+         animation: gradientBG 15s ease infinite;
+         z-index: -1;
+      }
+
+      @keyframes gradientBG {
+         0% { background-position: 0% 50%; }
+         50% { background-position: 100% 50%; }
+         100% { background-position: 0% 50%; }
+      }
+   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-green-400 to-blue-500 text-white">
-    <div class="max-w-6xl mx-auto px-6 py-16 text-center">
-      <img class="mx-auto w-36 h-36 rounded-full border-4 border-white object-cover" src="https://via.placeholder.com/150" alt="Fathima Farsana">
-      <h1 class="mt-6 text-4xl font-bold">Fathima Farsana</h1>
-      <p class="mt-2 text-xl">Arabic Teacher & Certified Translator</p>
-      <p class="mt-1 text-gray-200">Abu Dhabi, UAE</p>
-      <div class="mt-6 flex justify-center gap-4">
-        <a href="#" class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-gray-100 transition">Contact Me</a>
-        <a href="#" class="border border-white px-5 py-2 rounded-full hover:bg-white hover:text-blue-600 transition">Message</a>
+<body class="font-body text-white">
+
+   <!-- Hero Section -->
+   <header class="relative py-32 text-center">
+      <div class="mx-auto w-fit relative">
+         <div class="absolute inset-0 rounded-full bg-white/20 blur-3xl animate-pulse-slow"></div>
+         <img class="relative mx-auto w-44 h-44 rounded-full border-4 border-white shadow-xl object-cover transition-transform hover:scale-105" src="profile.jpg" alt="Fathima Farsana">
       </div>
-    </div>
-  </header>
-
-  <!-- About Me Section -->
-  <section class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-    <p class="text-gray-700 leading-relaxed text-center">
-      I am Fathima Farsana, a professional Arabic teacher and certified Arabic-English translator.  
-      With years of experience in both education and legal translation, I help students and clients bridge language barriers with clarity and accuracy.  
-      My mission is to make Arabic accessible, engaging, and practical for learners and to provide precise translations for individuals and businesses.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="bg-gray-100 py-12">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center">Skills & Expertise</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">Arabic Language Teaching</h3>
-          <p class="text-gray-600">Interactive lessons in Modern Standard Arabic and local dialects.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">Legal & Official Translation</h3>
-          <p class="text-gray-600">Certified Arabic-English translation for legal documents, contracts, and certificates.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">Curriculum & Content Creation</h3>
-          <p class="text-gray-600">Creating educational content for learners of all levels, online and offline.</p>
-        </div>
-        <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg mb-2">Cultural Communication</h3>
-          <p class="text-gray-600">Bridging cultural understanding through language teaching and translation.</p>
-        </div>
+      <h1 class="mt-8 text-5xl md:text-6xl font-display font-bold drop-shadow-lg">Fathima Farsana</h1>
+      <p class="mt-3 text-2xl md:text-3xl text-yellow-400">Arabic Teacher & Certified Translator</p>
+      <p class="mt-2 text-lg md:text-xl text-white/80">Abu Dhabi, UAE</p>
+      <div class="mt-10 flex justify-center gap-6 flex-wrap">
+         <a href="#contact"
+            class="bg-yellow-400 text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-300 transition duration-300 transform hover:-translate-y-1">Contact Me</a>
+         <a href="#message"
+            class="border border-yellow-400 px-8 py-3 rounded-full text-yellow-400 hover:bg-yellow-400 hover:text-white transition duration-300 transform hover:-translate-y-1">Message</a>
       </div>
-    </div>
-  </section>
+   </header>
 
-  <!-- Experience Section -->
-  <section class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-6 text-center">Professional Experience</h2>
-
-    <!-- Current Role -->
-    <div class="bg-white p-6 rounded shadow mb-6">
-      <h3 class="font-semibold text-xl">Arabic Language Teacher</h3>
-      <p class="text-gray-600">QLive · Full-time</p>
-      <p class="text-gray-500 text-sm">Sep 2025 - Present · On-site</p>
-      <p class="text-gray-700 mt-2">
-        Designing and delivering interactive Arabic lessons for students, focusing on communication, comprehension, and cultural context.
+   <!-- About Me Section -->
+   <section class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="text-4xl font-display font-bold mb-8 text-center text-white">About Me</h2>
+      <p class="text-white/80 leading-relaxed text-center text-lg bg-white/10 backdrop-blur-md rounded-3xl p-8 shadow-lg border border-white/20">
+         I am Fathima Farsana, a professional Arabic teacher and certified Arabic-English translator. With years of experience in both education and legal translation, I help students and clients bridge language barriers with clarity and accuracy. My mission is to make Arabic accessible, engaging, and practical for learners and to provide precise translations for individuals and businesses.
       </p>
-    </div>
+   </section>
 
-    <!-- Previous Role -->
-    <div class="bg-white p-6 rounded shadow">
-      <h3 class="font-semibold text-xl">Arabic Translator</h3>
-      <p class="text-gray-600">NOT NOW · Full-time</p>
-      <p class="text-gray-500 text-sm">Feb 2025 - Aug 2025 · On-site</p>
-      <p class="text-gray-700 mt-2">
-        Provided certified Arabic-English translation services for legal and official documents, ensuring accuracy and confidentiality.
-      </p>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section class="bg-gray-50 py-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">Education</h2>
-      <div class="bg-white p-6 rounded shadow mb-4">
-        <h3 class="font-semibold text-lg">Calicut University, Thenhipalem, Malapuram</h3>
-        <p class="text-gray-600">Bachelor of Arts - Arabic Language and Literature</p>
-        <p class="text-gray-500 text-sm">Grade: 81.42% | Content Creator</p>
+   <!-- Skills Section -->
+   <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+         <h2 class="text-4xl font-display font-bold mb-12 text-center text-white">Skills & Expertise</h2>
+         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 border border-white/20">
+               <h3 class="font-semibold text-xl mb-3">Arabic Language Teaching</h3>
+               <p class="text-white/70">Interactive lessons in Modern Standard Arabic and local dialects.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 border border-white/20">
+               <h3 class="font-semibold text-xl mb-3">Legal & Official Translation</h3>
+               <p class="text-white/70">Certified Arabic-English translation for legal documents, contracts, and certificates.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 border border-white/20">
+               <h3 class="font-semibold text-xl mb-3">Curriculum & Content Creation</h3>
+               <p class="text-white/70">Creating educational content for learners of all levels, online and offline.</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg hover:shadow-2xl transition duration-300 border border-white/20">
+               <h3 class="font-semibold text-xl mb-3">Cultural Communication</h3>
+               <p class="text-white/70">Bridging cultural understanding through language teaching and translation.</p>
+            </div>
+         </div>
       </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="font-semibold text-lg">KKMHSS CHEEKODE</h3>
-        <p class="text-gray-600">High School Diploma</p>
-      </div>
-    </div>
-  </section>
+   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 py-6 text-center">
-    &copy; 2025 Fathima Farsana. All rights reserved.
-  </footer>
+   <!-- Experience Section -->
+   <section class="max-w-4xl mx-auto px-6 py-16">
+      <h2 class="text-4xl font-display font-bold mb-12 text-center text-white">Professional Experience</h2>
+      <div class="space-y-8">
+         <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-white/20">
+            <h3 class="font-semibold text-2xl mb-2">Arabic Language Teacher</h3>
+            <p class="text-yellow-400 font-semibold">QLive · Full-time</p>
+            <p class="text-white/60 text-sm mb-2">Sep 2025 - Present · On-site</p>
+            <p class="text-white/80 mt-2">Designing and delivering interactive Arabic lessons for students, focusing on communication, comprehension, and cultural context.</p>
+         </div>
+         <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-white/20">
+            <h3 class="font-semibold text-2xl mb-2">Arabic Translator</h3>
+            <p class="text-yellow-400 font-semibold">NOT NOW · Full-time</p>
+            <p class="text-white/60 text-sm mb-2">Feb 2025 - Aug 2025 · On-site</p>
+            <p class="text-white/80 mt-2">Provided certified Arabic-English translation services for legal and official documents, ensuring accuracy and confidentiality.</p>
+         </div>
+      </div>
+   </section>
+
+   <!-- Education Section -->
+   <section class="py-16">
+      <div class="max-w-4xl mx-auto px-6">
+         <h2 class="text-4xl font-display font-bold mb-12 text-center text-white">Education</h2>
+         <div class="space-y-6">
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-white/20">
+               <h3 class="font-semibold text-xl mb-2">Calicut University, Thenhipalem, Malapuram</h3>
+               <p class="text-yellow-400 font-semibold">Bachelor of Arts - Arabic Language and Literature</p>
+               <p class="text-white/60 text-sm">Grade: 81.42% | Content Creator</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl shadow-lg border border-white/20">
+               <h3 class="font-semibold text-xl mb-2">KKMHSS CHEEKODE</h3>
+               <p class="text-yellow-400 font-semibold">High School Diploma</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer class="py-8 text-center">
+      <span class="font-display text-lg text-white">&copy; 2025 Fathima Farsana. All rights reserved.</span>
+   </footer>
+
+   <style>
+      @keyframes pulse-slow {
+         0%, 100% { opacity: 0.3; }
+         50% { opacity: 0.6; }
+      }
+      .animate-pulse-slow {
+         animation: pulse-slow 3s ease-in-out infinite;
+      }
+   </style>
 
 </body>
+
 </html>
